@@ -79,7 +79,10 @@ struct HomeView: View {
                 } else {
                     List {
                         ForEach(filteredItems) { item in
-                            ItemRow(item: item)
+                            // tap to open details
+                            NavigationLink(destination: ItemDetailView(item: item)) {
+                                ItemRow(item: item)
+                            }
                         }
                         .onDelete(perform: deleteItems)
                     }
