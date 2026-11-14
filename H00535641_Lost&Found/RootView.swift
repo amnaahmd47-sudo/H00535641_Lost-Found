@@ -5,6 +5,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct RootView: View {
     // show launch screen first
@@ -20,7 +21,7 @@ struct RootView: View {
             if showLaunchScreen {
                 LaunchScreenView()
             } else if isLoggedIn {
-                ContentView()
+                HomeView()
             } else {
                 LoginView()
             }
@@ -42,4 +43,5 @@ struct RootView: View {
 
 #Preview {
     RootView()
+        .modelContainer(for: Item.self, inMemory: true)
 }
