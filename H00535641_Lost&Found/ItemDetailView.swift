@@ -16,10 +16,10 @@ struct ItemDetailView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            // photo placeholder
-            Image(systemName: "photo")
-                .font(.system(size: 50))
-                .foregroundColor(.secondary)
+            // item picture
+            Image(systemName: item.icon)
+                .font(.system(size: 70))
+                .foregroundColor(.blue)
                 .frame(maxWidth: .infinity)
                 .frame(height: 180)
                 .background(Color.gray.opacity(0.15))

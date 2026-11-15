@@ -123,7 +123,7 @@ struct HomeView: View {
         modelContext.insert(Item(title: "Black Wallet", details: "Black leather wallet with my HCT card inside.", category: "Wallets & Bags", place: "Library B", phone: "0501234567", isLost: true, date: Date()))
         modelContext.insert(Item(title: "AirPods Case", details: "White AirPods case near the cafeteria entrance.", category: "Electronics", place: "Cafeteria", phone: "0507654321", isLost: false, date: Date()))
         modelContext.insert(Item(title: "Student ID Card", details: "HCT student ID card.", category: "Cards", place: "Block C", phone: "0501112233", isLost: true, date: Date()))
-        modelContext.insert(Item(title: "Blue Water Bottle", details: "Blue metal bottle with stickers.", category: "Other", place: "Gym", phone: "0504445566", isLost: false, date: Date()))
+        modelContext.insert(Item(title: "Blue Water Bottle", details: "Blue metal bottle with stickers.", category: "Bottles", place: "Gym", phone: "0504445566", isLost: false, date: Date()))
         didAddSamples = true
     }
 }
@@ -134,10 +134,10 @@ struct ItemRow: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            // photo placeholder
-            Image(systemName: "photo")
+            // item picture
+            Image(systemName: item.icon)
                 .font(.title2)
-                .foregroundColor(.secondary)
+                .foregroundColor(.blue)
                 .frame(width: 56, height: 56)
                 .background(Color.gray.opacity(0.15))
                 .cornerRadius(10)

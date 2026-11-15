@@ -29,4 +29,21 @@ class Item {
         self.isReturned = false
         self.date = date
     }
+
+    // picture that matches the item type
+    var icon: String {
+        if category == "Wallets & Bags" {
+            return "wallet.pass"
+        } else if category == "Electronics" {
+            return "headphones"
+        } else if category == "Cards" {
+            return "person.text.rectangle"
+        } else if category == "Keys" {
+            return "key"
+        } else if category == "Bottles" {
+            return "waterbottle"
+        } else {
+            return "shippingbox"
+        }
+    }
 }
